@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+    <title>四則演算で10を作るゲーム</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My GitHub Pages Site</h1>
-    <p>This is my first GitHub Pages deployment!</p>
+    <div class="container">
+        <h1>四則演算で10を作るゲーム</h1>
+        <p class="instructions">4つの数字の間に演算子を選んで、計算結果を10にしてください。</p>
+        
+        <div class="game-board">
+            <div class="equation">
+                <div class="number" id="num1">0</div>
+                <select class="operator" id="op1">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">×</option>
+                    <option value="/">/</option>
+                </select>
+                <div class="number" id="num2">0</div>
+                <select class="operator" id="op2">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">×</option>
+                    <option value="/">/</option>
+                </select>
+                <div class="number" id="num3">0</div>
+                <select class="operator" id="op3">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">×</option>
+                    <option value="/">/</option>
+                </select>
+                <div class="number" id="num4">0</div>
+                <span class="equals">=</span>
+                <div class="result" id="result">0</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="new-problem-btn" class="btn btn-secondary">問題を変更</button>
+            <button id="submit-btn" class="btn btn-primary">判定</button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
